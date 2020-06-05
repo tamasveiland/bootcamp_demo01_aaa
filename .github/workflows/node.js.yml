@@ -27,3 +27,18 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+      continue-on-error: true
+    - name: Upload a Build Artifact - App Manifest
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        name: App_Manifest # optional
+        # A file, directory or wildcard pattern that describes what to upload
+        path: ./package
+    - name: Upload a Build Artifact - App
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        name: App # optional
+        # A file, directory or wildcard pattern that describes what to upload
+        path: ./dist
