@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  APPLICATION_ID: '392df650-a705-11ea-9f5d-61fe147bebd6'
+  PACKAGE_NAME: 'firstdemoapp'
+  VERSION: '0.0.1'
+  HOSTNAME: 'tvfirstdemoapp.azurewebsites.net'
+
 jobs:
   build:
 
